@@ -1,26 +1,31 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-disable global-require */
 /* eslint-disable no-console */
-import express from 'express';
+import app from 'server';
+import http from 'http';
 
-let app = require('./server').default;
+const server = http.createServer(app);
+
+let currentApp = app;
+const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
+try {
+  server.listen(port, () => {
+    console.log(`> Server started on port ${port}.`);
+  });
+} catch (error) {
+  if (error) console.log(error);
+}
 
 if (module.hot) {
+  console.log('✅  Server-side HMR Enabled!');
+
   module.hot.accept('./server', () => {
     console.log('🔁  HMR Reloading `./server`...');
+
     try {
-      app = require('./server').default;
+      server.removeListener('request', currentApp);
+      server.on('request', app);
+      currentApp = app;
     } catch (error) {
       console.error(error);
     }
   });
-  console.info('✅  Server-side HMR Enabled!');
 }
-
-const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
-
-export default express()
-  .use((req, res) => app.handle(req, res))
-  .listen(port, () => {
-    console.log(`> App started http://localhost:${port}`);
-  });
