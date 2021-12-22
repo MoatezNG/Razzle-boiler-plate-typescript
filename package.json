@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start:tsc": "tsc -b -w --preserveWatchOutput",
-    "start": "concurrently \"yarn start:tsc\" \"razzle start\"",
+    "start": "npx run concurrently \"yarn start:tsc\" \"razzle start\"",
     "build": "tsc -b && razzle build --noninteractive",
     "test": "razzle test --watchAll --env=jsdom",
     "prestart:prod": "yarn build",
