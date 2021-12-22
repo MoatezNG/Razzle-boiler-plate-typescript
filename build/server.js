@@ -23,7 +23,7 @@ module.exports =
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "185cec8e724083fb27ba";
+/******/ 	var hotCurrentHash = "05bf791521da3d9415ea";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1643,7 +1643,7 @@ const renderApp = (req, res) => {
 };
 const server = express__WEBPACK_IMPORTED_MODULE_1___default()();
 server.use("/api/v1" || false, server_routes__WEBPACK_IMPORTED_MODULE_6__["default"]);
-server.disable('x-powered-by').use(express__WEBPACK_IMPORTED_MODULE_1___default.a.static("C:\\Users\\moate\\OneDrive\\Desktop\\Tests\\Razzle-boiler-plate-typescript\\public")).get('/*', (req, res) => {
+server.disable('x-powered-by').use(express__WEBPACK_IMPORTED_MODULE_1___default.a.static('public')).get('/*', (req, res) => {
   const {
     html = '',
     redirect = false
