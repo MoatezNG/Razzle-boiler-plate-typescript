@@ -12,6 +12,7 @@ const Home: React.FC = () => {
       <button type="button" onClick={() => dispatch(incrementAction())}>
         Increment
       </button>
+      {process.env.PORT}
     </div>
   );
 };
