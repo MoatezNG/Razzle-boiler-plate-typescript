@@ -1,14 +1,26 @@
 {
   "client": {
+    "css": [
+      "/static/css/client.16dc0a43.css"
+    ],
     "js": [
-      "http://localhost:3002/static/js/client.js"
+      "/static/js/client.e0042795.js"
     ],
     "map": [
-      "http://localhost:3002/static/js/client.js.map"
+      "/static/css/client.16dc0a43.css.map",
+      "/static/js/client.e0042795.js.map"
     ],
     "chunks": [
-      "client"
+      0
     ]
   },
-  "noentry": {}
+  "noentry": {
+    "ico": [
+      "/favicon.ico"
+    ],
+    "txt": [
+      "/robots.txt",
+      "/static/js/client.e0042795.js.LICENSE.txt"
+    ]
+  }
 }
