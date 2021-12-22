@@ -12,6 +12,5 @@ public/static
 .env.production.local
 
 package-lock.json
-yarn.lock
 vscode
 .history
