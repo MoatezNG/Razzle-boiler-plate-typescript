@@ -23,7 +23,7 @@ module.exports =
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "185cec8e724083fb27ba";
+/******/ 	var hotCurrentHash = "a3bc8ca963bd71d2545a";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1513,9 +1513,10 @@ __webpack_require__.r(__webpack_exports__);
 const server = http__WEBPACK_IMPORTED_MODULE_1___default.a.createServer(server__WEBPACK_IMPORTED_MODULE_0__["default"]);
 let currentApp = server__WEBPACK_IMPORTED_MODULE_0__["default"];
 const port =  true ? parseInt("3001", 10) : undefined;
+const host = '0.0.0.0';
 
 try {
-  server.listen(port, () => {
+  server.listen(port, host, () => {
     console.log(`> Server started on port ${port}.`);
   });
 } catch (error) {

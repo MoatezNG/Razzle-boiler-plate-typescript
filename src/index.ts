@@ -6,8 +6,9 @@ const server = http.createServer(app);
 
 let currentApp = app;
 const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
+const host = '0.0.0.0';
 try {
-  server.listen(port, () => {
+  server.listen(port, host, () => {
     console.log(`> Server started on port ${port}.`);
   });
 } catch (error) {
