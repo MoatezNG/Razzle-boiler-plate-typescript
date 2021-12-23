@@ -5,7 +5,7 @@
     "dev": "razzle start",
     "build": "razzle build --noninteractive",
     "test": "razzle test --env=jsdom",
-    "start": "NODE_ENV=production node build/server.js",
+    "start:prod": "NODE_ENV=production node build/server.js",
     "heroku-postbuild": "npm run build --noninteractive"
   },
   "dependencies": {
