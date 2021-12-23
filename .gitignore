@@ -5,6 +5,7 @@ npm-debug.log*
 
 coverage
 node_modules
+build
 public/static
 .env.local
 .env.development.local
@@ -12,5 +13,7 @@ public/static
 .env.production.local
 
 package-lock.json
+yarn.lock
+cache
 vscode
 .history
