@@ -5,8 +5,7 @@
     "dev": "razzle start",
     "build": "razzle build --noninteractive",
     "test": "razzle test --env=jsdom",
-    "start": "NODE_ENV=production node build/server.js",
-    "heroku-postbuild": "npm run build"
+    "start": "NODE_ENV=production node build/server.js"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",
