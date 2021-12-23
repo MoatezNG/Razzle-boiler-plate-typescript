@@ -2,12 +2,11 @@
   "name": "razzle-boiler-plate",
   "version": "1.0.0",
   "scripts": {
-    "start": "razzle start",
+    "dev": "razzle start",
     "build": "razzle build --noninteractive",
     "test": "razzle test --env=jsdom",
-    "prestart:prod": "yarn build --noninteractive ",
-    "start:prod": "NODE_ENV=production node build/server.js",
-    "deploy": "git push heroku heroku:main"
+    "start": "NODE_ENV=production node build/server.js",
+    "heroku-postbuild": "yarn build-css && razzle build"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",
