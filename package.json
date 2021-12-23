@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "razzle start",
-    "build": "razzle build",
+    "build": "razzle build --noninteractive",
     "test": "razzle test --env=jsdom",
     "start": "NODE_ENV=production node build/server.js",
     "heroku-postbuild": "npm run build"

@@ -73,7 +73,7 @@ const server = express();
 server.use(process.env.RAZZLE_API_PREFIX || '', backendRoutes);
 server
   .disable('x-powered-by')
-  .use(express.static('public'))
+  .use(express.static(process.env.RAZZLE_PUBLIC_DIR!))
   .get('/*', (req: express.Request, res: express.Response) => {
     const { html = '', redirect = false } = renderApp(req, res);
     if (redirect) {
