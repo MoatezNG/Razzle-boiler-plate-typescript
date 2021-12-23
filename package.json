@@ -2,18 +2,18 @@
   "name": "razzle-boiler-plate",
   "version": "1.0.0",
   "scripts": {
-    "dev": "razzle start",
-    "build": "razzle build --noninteractive",
+    "start": "razzle start",
+    "build": "razzle build",
     "test": "razzle test --env=jsdom",
-    "start:prod": "PORT=5000 NODE_ENV=production node build/server.js",
-    "heroku-postbuild": "npm run build --noninteractive"
+    "prestart:prod": "yarn build",
+    "start:prod": "NODE_ENV=production node build/server.js",
+    "deploy": "git push heroku heroku:main"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",
     "@types/react-redux": "^7.1.19",
     "axios": "^0.21.1",
     "express": "^4.17.1",
-    "razzle-heroku": "^3.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.5",
